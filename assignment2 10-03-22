@@ -1,0 +1,27 @@
+create table examhalltickets(htno number(15) primary key,studentname varchar2(20),examcenter varchar2(30),regid number(4) references university(regid));
+
+ insert into examhalltickets values(&htnum,'&sname','&examcenter',&regdnum);
+
+ select * from examhalltickets;
+ 
+ 
+ 
+ 
+  select * from examhalltickets;
+
+      HTNO STUDENTNAME          EXAMCENTER                          REGID
+---------- -------------------- ------------------------------ ----------
+1.7038E+11 sai                  vsl degree college                      3
+1.7038E+11 aruna                aditya                                  4
+1.7038E+11 siva                 mohan degree college                    5
+1.7038E+11 sirisha              prg college                             6
+1.7038E+11 durga                msn chartice                            8
+
+SQL> desc university;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ REGID                                     NOT NULL NUMBER(4)
+ STUDENTNAME                                        VARCHAR2(20)
+ GENDER                                             CHAR(1)
+ YEAR                                               NUMBER(4)
+ COLLEGENAME                                        VARCHAR2(30)
