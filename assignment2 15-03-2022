@@ -1,0 +1,71 @@
+ insert into registration values(&redno,'&name','&gender','&qualification',&age);
+Enter value for redno: 1
+Enter value for name: sai
+Enter value for gender: m
+Enter value for qualification: bsc
+Enter value for age: 20
+old   1: insert into registration values(&redno,'&name','&gender','&qualification',&age)
+new   1: insert into registration values(1,'sai','m','bsc',20)
+
+1 row created.
+
+SQL> /
+Enter value for redno: 2
+Enter value for name: siva
+Enter value for gender: f
+Enter value for qualification: btech
+Enter value for age: 29
+old   1: insert into registration values(&redno,'&name','&gender','&qualification',&age)
+new   1: insert into registration values(2,'siva','f','btech',29)
+
+1 row created.
+
+SQL> /
+Enter value for redno: 3
+Enter value for name: sirisha
+Enter value for gender: f
+Enter value for qualification: mca
+Enter value for age: 30
+old   1: insert into registration values(&redno,'&name','&gender','&qualification',&age)
+new   1: insert into registration values(3,'sirisha','f','mca',30)
+
+1 row created.
+
+SQL> /
+Enter value for redno: 4
+Enter value for name: uma
+Enter value for gender: m
+Enter value for qualification: diploma
+Enter value for age: 27
+old   1: insert into registration values(&redno,'&name','&gender','&qualification',&age)
+new   1: insert into registration values(4,'uma','m','diploma',27)
+
+1 row created.
+
+SQL> /
+Enter value for redno: 5
+Enter value for name: satya
+Enter value for gender: f
+Enter value for qualification: bsc
+Enter value for age: 24
+old   1: insert into registration values(&redno,'&name','&gender','&qualification',&age)
+new   1: insert into registration values(5,'satya','f','bsc',24)
+
+1 row created.
+
+SQL> select *from registration;
+
+     REDNO CANDNAME                       GENDER  QUALIFICATION               AGE
+---------- ------------------------------ ------- -------------------- ----------
+         1 sai                            m       bsc                          20
+         2 siva                           f       btech                        29
+         3 sirisha                        f       mca                          30
+         4 uma                            m       diploma                      27
+         5 satya                          f       bsc                          24
+
+SQL> select *from registration where gender='m';
+
+     REDNO CANDNAME                       GENDER  QUALIFICATION               AGE
+---------- ------------------------------ ------- -------------------- ----------
+         1 sai                            m       bsc                          20
+         4 uma                            m       diploma                      27
