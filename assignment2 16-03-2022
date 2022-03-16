@@ -1,0 +1,44 @@
+SQL> update apsrtc set ticket_price=ticket_price+100 where kms > 500;
+
+3 rows updated.
+
+SQL>  select * from APSRTC;
+
+SERVICE_NO SERVICE_TYPE         BOARDING        UPTO                   KMS TICKET_PRICE
+---------- -------------------- --------------- --------------- ---------- ------------
+1          p                    kkd             hyd                    800          600
+2          p                    kkd             chennai                500          600
+3          p                    kkd             bengalore             2000          400
+4          exp                  tirupathi       kkd                    200          600
+5          lux                  yanam           kkd                     45          100
+6          lux                  kerala          shiridi                345          300
+7          lux                  mumbai          chennai                400          500
+8          p                    hyd             kkd                    900          800
+9          p                    ptp             jhfgfgf                 50          600
+
+9 rows selected.
+
+SQL> update apsrtc set ticket_price=ticket_price-50 where kms < 500;
+
+5 rows updated.
+
+SQL>  select * from APSRTC;
+
+SERVICE_NO SERVICE_TYPE         BOARDING        UPTO                   KMS TICKET_PRICE
+---------- -------------------- --------------- --------------- ---------- ------------
+1          p                    kkd             hyd                    800          600
+2          p                    kkd             chennai                500          600
+3          p                    kkd             bengalore             2000          400
+4          exp                  tirupathi       kkd                    200          550
+5          lux                  yanam           kkd                     45           50
+6          lux                  kerala          shiridi                345          250
+7          lux                  mumbai          chennai                400          450
+8          p                    hyd             kkd                    900          800
+9          p                    ptp             jhfgfgf                 50          550
+
+9 rows selected.
+SQL>  select * from apsrtc where boarding='kkd' and upto='hyd';
+
+SERVICE_NO SERVICE_TYPE         BOARDING        UPTO                   KMS TICKET_PRICE
+---------- -------------------- --------------- --------------- ---------- ------------
+1          p                    kkd             hyd                    800          600
